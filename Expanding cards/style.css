@@ -1,0 +1,52 @@
+body {
+  height: 100vh;
+  background-color: #f1d6b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 80vh;
+}
+.container .card {
+  cursor: pointer;
+  flex: 1;
+  padding: 10px;
+  transition: flex 1s ease-out;
+  position: relative;
+}
+.container .card img {
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .card h2 {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  color: #fff;
+  letter-spacing: 3px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.card.big {
+  flex: 10;
+}
+.card.big h2 {
+  opacity: 1;
+}
+
+@media (max-width: 500px) {
+  .container .card:nth-of-type(4), .container .card:nth-of-type(5) {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
