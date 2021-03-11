@@ -1,0 +1,109 @@
+* {
+    --colr: rgba(255, 255, 255);
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--colr);
+}
+
+header {
+    background-image: url(images/life_is_strange_2_4k_8k-5120x2880.jpg);
+    animation: _bg 10s alternate infinite linear;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-size: 150%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header .float {
+    position: absolute;
+    background-color: var(--colr);
+    color: #000;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    -webkit-mix-blend-mode: screen;
+    mix-blend-mode: screen;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.html {
+    left: 10px;
+    top: 10px;
+    animation: _html 1s alternate infinite linear;
+}
+
+.css {
+    right: 10px;
+    top: 10px;
+    animation: _css 1s alternate infinite linear;
+}
+
+.js {
+    bottom: 10px;
+    transform-origin: left;
+    animation: _js 1s alternate infinite linear;
+}
+
+header .main {
+    width: 50%;
+    text-align: center;
+}
+
+header .main h2 {
+    background-color: var(--colr);
+    color: #000;
+    font-size: 100px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    -webkit-mix-blend-mode: screen;
+    mix-blend-mode: screen;
+    border-radius: 10px;
+    /* transform: translateY(-100px); */
+}
+
+@keyframes _css {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(60vh);
+    }
+}
+
+@keyframes _html {
+    0% {
+        transform: translateY(60vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes _js {
+    0% {
+        transform-origin: right;
+        transform: translateX(-25vw) rotate(13deg);
+    }
+    10% {
+        transform: translateX(-25vw) rotate(0);
+    }
+    90% {
+        transform-origin: left;
+        transform: translateX(30vw) rotate(0);
+    }
+    100% {
+        transform: translateX(30vw) rotate(-13deg);
+    }
+}
+
+@keyframes _bg {}
